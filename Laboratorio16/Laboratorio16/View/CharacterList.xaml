@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Laboratorio16.View.CharacterList"
+             Title="Lista de Personajes">
+
+    <StackLayout>
+        <ListView x:Name="characterListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding Image}" WidthRequest="120" Aspect="AspectFill"/>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large"/>
+                                <Label Text="{Binding Status}" FontSize="Medium"/>
+                                <Label Text="{Binding Species}" FontSize="Medium"/>
+                                <Label Text="{Binding Type}" FontSize="Medium"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
